@@ -1,0 +1,52 @@
+<%- include("partials/header.ejs") %>
+    <div class="middle">
+        <div class="emoji">
+            <p>P🌍st Your Travel Stories!👇</p>
+            <div class="posts">
+                <h2>My Trip to Australia</h2>
+                <h5>
+                    <%= currentDate %>
+                </h5>
+                <p>
+                    Australia is a land of striking diversity, both in its landscapes and its people. From the vast
+                    expanses of the Outback
+                    to the vibrant coastal cities, the country offers a unique blend of urban sophistication and natural
+                    beauty. Australians
+                    are known for their laid-back attitude, love of outdoor activities, and multicultural outlook,
+                    reflected in the array of
+                    cuisines and cultural events. Whether you're exploring the ancient wonders of the Red Centre,
+                    surfing the waves along
+                    the Gold Coast, or enjoying a barbecue with friends, Australia's charm lies in its easygoing
+                    lifestyle and stunning
+                    scenery. Can not wait to return there AGAIN!!
+                </p>
+            </div>
+            <% posts.forEach( (post, index)=> { %>
+                <div class="card" id="post_<%= index %>">
+                    <h2>
+                        <%= post.title %>
+                    </h2>
+                    <h5>
+                        <%= post.date %>
+                    </h5>
+                    <p>
+                        <%= post.content %>
+                    </p>
+                    <div class="buttons">
+                        <button class="edit-btn" onclick="editPost(<%= index %>)">Edit</button>
+                        <button class="delete-btn" onclick="deletePost(<%= index %>)">Delete</button>
+                    </div>
+                </div>
+                <% }); %>
+                    <div class="blog-post">
+            <form id="postForm" action="/posts" method="POST">
+                <label for="title">Post Title:</label>
+                <input type="text" id="btitle" name="btitle" required minlength="3" />
+                <label for="content">Post Content:</label>
+                <textarea class="input-large" id="bcontent" name="bcontent" required minlength="3"></textarea>
+                <input type="submit" value="POST" />
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>

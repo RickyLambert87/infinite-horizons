@@ -1,0 +1,352 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: #00adb5;
+    font-size: 3.5rem;
+}
+
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 20px;
+    font-size: 3rem;
+    color: #EEEEEE;
+}
+
+
+p {
+    font-size: 2rem;
+    padding: 30px;
+    color: #EEEEEE;
+    margin: 0.5rem 0;
+}
+
+.showcase {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background: url('/images/mountain-view.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.showcase-content h1 {
+    font-weight: 800;
+    letter-spacing: 10px;
+    font-size: 8.2rem;
+    line-height: 2.1;
+    margin: 3rem 0 2rem;
+    color: #EEEEEE;
+}
+
+span {
+    text-decoration: underline;
+}
+
+b {
+    color: #00adb5;
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #EEEEEE;
+    font-weight: 400;
+    font-size: 2.9rem;
+    line-height: 1.25;
+    margin: 10rem 0 2rem;
+}
+
+.middle {
+    padding: 40px;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    box-shadow: inset 120px 100px 250px #000000;
+}
+
+.emoji {
+    margin: 10rem 0 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.emoji>p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #EEEEEE;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 1.25;
+}
+
+.posts {
+    margin-bottom: 50px;
+}
+
+
+.blog-post {
+    margin: 0 auto;
+    padding: 30px;
+    width: 500px;
+    background-color: #222831;
+    border-radius: 10px;
+}
+
+.blog-post form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-large {
+    width: auto;
+    height: 150px;
+    font-size: 20px;
+    background-color: #393e46;
+    color: #EEEEEE;
+}
+
+.blog-post label {
+    margin: 5px;
+    color: #00adb5;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.blog-post input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+    background-color: #393e46;
+    color: #EEEEEE;
+}
+
+
+
+.blog-post input[type="submit"] {
+    width: 100px;
+    height: 50px;
+    margin: 25px auto;
+    padding: 10px 20px;
+    background-color: #00adb5;
+    color: #EEEEEE;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #222831;
+    cursor: pointer;
+}
+
+.buttons {
+    margin: 30px;
+
+}
+
+.edit-btn,
+.delete-btn {
+    width: 8rem;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #00adb5;
+    color: #EEEEEE;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#footer {
+    display: flex;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url('/images/top-of-forrest.jpg') no-repeat center center/cover;
+    box-shadow: inset 120px 100px 250px #000000;
+}
+
+#footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+#copyright {
+    flex-grow: 2;
+    position: relative;
+    align-self: flex-end;
+    bottom: 0;
+    text-align: center;
+    color: #EEEEEE;
+    font-weight: 600;
+    font-size: 2rem;
+}
+@media screen and (max-width: 1570px) {
+
+.showcase-content h1 {
+    
+    font-size: 6rem;
+    line-height: normal;
+
+}   
+
+}
+
+
+
+@media screen and (max-width: 1120px) {
+
+    .showcase-content p {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3,
+    h4,
+    h5 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .blog-post label {
+        font-size: 30px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 776px) {
+    .showcase-content h1 {
+        font-size: 40px;
+    }
+
+    .showcase-content p {
+        font-size: 25px;
+    }
+
+    .blog-post {
+        margin: 0 auto;
+        padding: 20px;
+        width: 300px;
+
+    }
+
+    .blog-post label {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 416px) {
+
+    .showcase {
+        height: 50vh;
+
+    }
+
+    .showcase::after {
+        background: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+        box-shadow: inset 70px 70px 100px #000000, inset -70px -70px 100px #000000;
+    }
+
+    .showcase-content h1 {
+        line-height: 30px;
+        letter-spacing: 3px;
+    }
+
+    h2, h5 {
+        font-size: 19px;
+    }
+
+    p {
+        padding: 5px;
+        margin: auto;
+    }
+
+    .emoji>p {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #EEEEEE;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .blog-post {
+        margin: 0 auto;
+        padding: 20px;
+        height: auto;
+        width: auto;
+
+    }
+
+    .blog-post input[type="text"],
+    .input-large {
+        font-size: 15px;
+    }
+
+    .blog-post input[type="submit"] {
+        width: 70px;
+        height: 35px;
+        font-size: 10px;
+    }
+
+    #footer {
+        height: 30vh;
+    }
+
+    #copyright {
+        font-size: 20px;
+        margin-bottom: 0;
+        padding-bottom: 6px;
+    }
+
+}
